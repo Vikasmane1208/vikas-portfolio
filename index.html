@@ -13,184 +13,212 @@
     }
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
-      color: #2c3e50;
-      line-height: 1.6;
+      background: #f0f4f8;
+      color: #333;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header'
+        'sidebar main';
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: auto 1fr;
+      min-height: 100vh;
     }
     header {
-      background: #0d47a1;
+      grid-area: header;
+      background-color: #003366;
       color: white;
       text-align: center;
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
     header img {
-      width: 130px;
-      height: 130px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      margin-top: 20px;
       object-fit: cover;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     header h1 {
-      font-size: 2.8rem;
-      margin-top: 20px;
+      margin-top: 15px;
+      font-size: 2rem;
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-top: 5px;
     }
+    aside {
+      grid-area: sidebar;
+      background-color: #ffffff;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+    }
+    aside nav ul {
+      list-style: none;
+    }
+    aside nav ul li {
+      margin: 10px 0;
+    }
+    aside nav ul li a {
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
     main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
+      grid-area: main;
+      padding: 40px;
     }
     section {
-      background: #fff;
+      background: white;
       margin-bottom: 30px;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-      transition: transform 0.2s ease;
-    }
-    section:hover {
-      transform: translateY(-3px);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 15px;
-      color: #0d47a1;
-      border-bottom: 2px solid #90caf9;
-      padding-bottom: 5px;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #003366;
     }
     ul {
       padding-left: 20px;
+      line-height: 1.8;
     }
     a {
-      color: #1565c0;
+      color: #005bb5;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    .tech-icons {
-      margin-bottom: 10px;
-    }
     .tech-icons img {
-      width: 40px;
+      height: 40px;
       margin-right: 10px;
-      vertical-align: middle;
     }
     form input, form textarea, form button {
       width: 100%;
-      padding: 12px;
-      margin-top: 12px;
+      padding: 10px;
+      margin-top: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 1rem;
     }
     form button {
-      background-color: #0d47a1;
+      background-color: #003366;
       color: white;
       cursor: pointer;
-      transition: 0.3s ease;
-    }
-    form button:hover {
-      background-color: #1565c0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="vikasm.jpeg" alt="Vikas Mane">
-    <h1>Vikas Mane</h1>
-    <p>Java | Flutter | Web Developer</p>
-  </header>
+  <div class="grid-container">
+    <header>
+      <img src="vikasm.jpeg" alt="Vikas Mane">
+      <h1>Vikas Mane</h1>
+      <p>Java | Flutter | Web Developer</p>
+    </header>
 
-  <main>
-    <section>
-      <h2>Contact</h2>
-      <p><strong>Phone:</strong> 9730245267</p>
-      <p><strong>Email:</strong> <a href="mailto:Vikasmane44576@gmail.com">Vikasmane44576@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vikas-mane-b18644233" target="_blank">Vikas Mane Profile</a></p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/Vikasmane1208" target="_blank">github.com/Vikasmane1208</a></p>
-      <p><a href="Vikas_Mane_Resume.pdf" download>📥 Download Resume (PDF)</a></p>
-    </section>
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#personal">Personal</a></li>
+          <li><a href="#form">Contact Form</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-    <section>
-      <h2>Profile</h2>
-      <p>A highly motivated and hardworking individual looking for a responsible role in a reputable organization, with a strong passion for mobile and web development.</p>
-    </section>
+    <main>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><strong>Phone:</strong> 9730245267</p>
+        <p><strong>Email:</strong> <a href="mailto:Vikasmane44576@gmail.com">Vikasmane44576@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vikas-mane-b18644233" target="_blank">Vikas Mane Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Vikasmane1208" target="_blank">github.com/Vikasmane1208</a></p>
+        <p><a href="Vikas_Mane_Resume.pdf" download>📥 Download Resume (PDF)</a></p>
+      </section>
 
-    <section>
-      <h2>Skills</h2>
-      <div class="tech-icons">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
-      </div>
-      <ul>
-        <li>Programming: Java, JDBC, HTML, CSS, Dart</li>
-        <li>Database: MySQL</li>
-        <li>Frameworks: Flutter, ASP.NET, Angular</li>
-        <li>Strengths: Communication, Critical Thinking</li>
-        <li>Languages: English, Hindi</li>
-      </ul>
-    </section>
+      <section id="profile">
+        <h2>Profile</h2>
+        <p>A highly motivated and hardworking individual looking for a responsible role in a reputable organization, with a strong passion for mobile and web development.</p>
+      </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MSc Computer Science</strong> (2021–2023), Pune University — 73.25%</li>
-        <li><strong>BSc Computer Science</strong> (2018–2021), Pune University — 74.10%</li>
-        <li><strong>HSC Science</strong> (2017–2018), Bhavani-Nagar — 59.23%</li>
-        <li><strong>SSC</strong> (2016), Songaon — 76.40%</li>
-      </ul>
-    </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="tech-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+        </div>
+        <ul>
+          <li>Programming: Java, JDBC, HTML, CSS, Dart</li>
+          <li>Database: MySQL</li>
+          <li>Frameworks: Flutter, ASP.NET, Angular</li>
+          <li>Strengths: Communication, Critical Thinking</li>
+          <li>Languages: English, Hindi</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Courses & Certifications</h2>
-      <ul>
-        <li>C Language Training (IIT Bombay)</li>
-        <li>Java Full Stack Development (The Kiran Academy)</li>
-        <li>6-Month Internship — GTL Infotech Pvt. Ltd., Pune</li>
-      </ul>
-    </section>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>MSc Computer Science</strong> (2021–2023), Pune University — 73.25%</li>
+          <li><strong>BSc Computer Science</strong> (2018–2021), Pune University — 74.10%</li>
+          <li><strong>HSC Science</strong> (2017–2018), Bhavani-Nagar — 59.23%</li>
+          <li><strong>SSC</strong> (2016), Songaon — 76.40%</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Someshwar Sugar Management Application:</strong> Real-time mobile solution for factory staff and administrators with offline sync, role-based access, and reporting.</li>
-        <li><strong>Vighnhar Sugar Management Application:</strong> Cross-platform enterprise app for internal workflows, employee and finance tracking.</li>
-      </ul>
-    </section>
+      <section id="courses">
+        <h2>Courses & Certifications</h2>
+        <ul>
+          <li>C Language Training (IIT Bombay)</li>
+          <li>Java Full Stack Development (The Kiran Academy)</li>
+          <li>6-Month Internship — GTL Infotech Pvt. Ltd., Pune</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Junior Flutter App Developer, 3Wd Software Baramati</strong> (Aug 2024 – Present)</li>
-        <li><strong>Intern, Prix Corporation Pvt. Ltd., Baramati</strong> (Jan–Jun 2024)</li>
-      </ul>
-    </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Someshwar Sugar Management Application:</strong> Real-time mobile solution for factory staff and administrators with offline sync, role-based access, and reporting.</li>
+          <li><strong>Vighnhar Sugar Management Application:</strong> Cross-platform enterprise app for internal workflows, employee and finance tracking.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Contact Form</h2>
-      <form action="mailto:Vikasmane44576@gmail.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Junior Flutter App Developer, 3Wd Software Baramati</strong> (Aug 2024 – Present)</li>
+          <li><strong>Intern, Prix Corporation Pvt. Ltd., Baramati</strong> (Jan–Jun 2024)</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Personal Details</h2>
-      <ul>
-        <li><strong>DOB:</strong> 24 December 2000</li>
-        <li><strong>Address:</strong> A/P – Songaon, Baramati, Pune 413102</li>
-        <li><strong>Nationality:</strong> Indian</li>
-      </ul>
-    </section>
-  </main>
+      <section id="personal">
+        <h2>Personal Details</h2>
+        <ul>
+          <li><strong>DOB:</strong> 24 December 2000</li>
+          <li><strong>Address:</strong> A/P – Songaon, Baramati, Pune 413102</li>
+          <li><strong>Nationality:</strong> Indian</li>
+        </ul>
+      </section>
+
+      <section id="form">
+        <h2>Contact Form</h2>
+        <form action="mailto:Vikasmane44576@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
