@@ -28,6 +28,13 @@
       font-size: 1.2rem;
       margin-top: 10px;
     }
+    header img {
+      margin-top: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
     main {
       max-width: 900px;
       margin: 40px auto;
@@ -58,12 +65,34 @@
     a:hover {
       text-decoration: underline;
     }
+    .tech-icons img {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    form button:hover {
+      background-color: #1e1e2f;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Vikas Mane</h1>
     <p>Java | Flutter | Web Developer</p>
+    <img src="da9d3c23-5b79-4447-a40e-b5f288fe6df6.jpeg" alt="Vikas Mane">
   </header>
 
   <main>
@@ -72,6 +101,8 @@
       <p><strong>Phone:</strong> 9730245267</p>
       <p><strong>Email:</strong> <a href="mailto:Vikasmane44576@gmail.com">Vikasmane44576@gmail.com</a></p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vikas-mane-b18644233" target="_blank">Vikas Mane Profile</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Vikasmane1208" target="_blank">github.com/Vikasmane1208</a></p>
+      <p><a href="Vikas_Mane_Resume.pdf" download>📥 Download Resume (PDF)</a></p>
     </section>
 
     <section>
@@ -81,6 +112,13 @@
 
     <section>
       <h2>Skills</h2>
+      <div class="tech-icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="40" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="40" />
+      </div>
       <ul>
         <li>Programming: Java, JDBC, HTML, CSS, Dart</li>
         <li>Database: MySQL</li>
@@ -109,26 +147,30 @@
       </ul>
     </section>
 
- <section>
-  <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>Someshwar Sugar Management Application</strong><br />
-      A cross-platform mobile solution developed for internal factory management. This app provides real-time access to production, inventory, and finance reports for factory staff and administrators. Includes role-based access, offline sync, and automated reporting for seamless daily operations on both Android and iOS.
-    </li>
-    <li>
-      <strong>Vighnhar Sugar Management Application</strong><br />
-      A mobile-based enterprise system tailored for factory managers and executives. It enables quick access to employee records, financial tracking, and scheme/beneficiary management. Designed for both Android and iOS platforms, focusing on report generation, user authentication, and internal workflow efficiency.
-    </li>
-  </ul>
-</section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Someshwar Sugar Management Application:</strong> Real-time mobile solution for factory staff and administrators with offline sync, role-based access, and reporting.</li>
+        <li><strong>Vighnhar Sugar Management Application:</strong> Cross-platform enterprise app for internal workflows, employee and finance tracking.</li>
+      </ul>
+    </section>
 
     <section>
       <h2>Experience</h2>
       <ul>
-        <li><strong>Junior Flutter App Developer , 3Wd Software Baramati</strong> (Aug 2024 – Present) — Developing and maintaining cross-platform mobile apps using Flutter.</li>
-        <li><strong>Intern, Prix Corporation Pvt. Ltd., Baramati</strong> (Jan–Jun 2024) — Angular, HTML, CSS, C#, ASP.NET, Flutter</li>
+        <li><strong>Junior Flutter App Developer, 3Wd Software Baramati</strong> (Aug 2024 – Present)</li>
+        <li><strong>Intern, Prix Corporation Pvt. Ltd., Baramati</strong> (Jan–Jun 2024)</li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Contact Form</h2>
+      <form action="mailto:Vikasmane44576@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
 
     <section>
